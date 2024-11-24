@@ -1,15 +1,30 @@
 import { Router} from 'express';
-// import { deleteUser, getAllUsers, getUser, postUser, updateUser } from '../controllers/controller';
-import {getAllUsers} from '../controllers/controller';
+import {deleteBeer,
+    getAllBeers,
+    getBeer,
+    postBeer,
+    updateBeer } from '../controllers/beer_controller';
+import {deleteBrewery,
+    getAllBreweries,
+    getBrewery,
+    postBrewery,
+    updateBrewery } from '../controllers/beer_controller';
 
 const router = Router();
 
-router.get('/users', getAllUsers);
-// router.get('/users/:idUser', getUser);
-// router.post('/users', postUser);
-// router.put('/users/:idUser', updateUser);
-// router.delete('/users/:idUser', deleteUser);
+// CRUD FOR BEERS
+router.get('/beers', getAllBeers);
+router.get('/beers/:idBeer', getBeer);
+router.post('/beers', postBeer);
+router.put('/beers/:idBeer', updateBeer);
+router.delete('/beers/:idBeer', deleteBeer);
 
+//CRUD FOR BREWERIES
+router.get('/breweries', getAllBreweries);
+router.get('/breweries/:idBrewery', getBrewery);
+router.post('/breweries', postBrewery);
+router.put('/breweries/:idBrewery', updateBrewery);
+router.delete('/breweries/:idBrewery', deleteBrewery);
 
 export default router;
 
