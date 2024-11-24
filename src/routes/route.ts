@@ -3,12 +3,13 @@ import {deleteBeer,
     getAllBeers,
     getBeer,
     postBeer,
-    updateBeer } from '../controllers/beer_controller';
+    updateBeer 
+    }from '../controllers/beer_controller';
 import {deleteBrewery,
     getAllBreweries,
     getBrewery,
     postBrewery,
-    updateBrewery } from '../controllers/beer_controller';
+    updateBrewery } from '../controllers/brewery_controller';
 
 const router = Router();
 
