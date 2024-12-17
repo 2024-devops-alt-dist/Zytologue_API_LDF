@@ -104,7 +104,7 @@ router.post('/beers', postBeer);
  *       200:
  *         description: Beer updated successfully
  */
-router.put('/beers/:idBeer', updateBeer);
+router.patch('/beers/:idBeer', updateBeer);
 
 /**
  * @swagger
