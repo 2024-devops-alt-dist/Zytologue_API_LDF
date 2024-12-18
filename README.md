@@ -6,8 +6,7 @@ API pour zytologue app
 First, make sure to download docker desktop from their site [Docker](https://www.docker.com/).
 Then you need to run the docker-compose script to create the postgres database server container.
 
-The comand is: `docker-compose up`
-
+The comand is: `docker-compose up --build`
 ## 2) Connection to DBeaver
 
 Make sure to download the cross-platform database tool [DBeaver](https://dbeaver.io/)

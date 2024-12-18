@@ -13,12 +13,16 @@ services:
 
   
   node_app:
-    build: ./src # Ruta al directorio que contiene el Dockerfile
+    build:
+      context: .                # El contexto de construcción es la raíz del proyecto
+      dockerfile: ./src/Dockerfile # Ruta al directorio que contiene el Dockerfile
     ports:
       - "3000:3000"
     depends_on:
-      - db
+      - postgres
     volumes:
       - ./src:/app
       - /app/node_modules
 
+volumes:
+  postgres_data:
