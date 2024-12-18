@@ -8,4 +8,17 @@ services:
       POSTGRES_USER: ${DATABASE_USER}
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
       POSTGRES_DB: ${DATABASE_NAME}
-    
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  
+  node_app:
+    build: ./src # Ruta al directorio que contiene el Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    volumes:
+      - ./src:/app
+      - /app/node_modules
+
