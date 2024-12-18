@@ -135,17 +135,17 @@ SET
   adress = 'New adress',
   city = 'New city'
 WHERE
-  id_brewery = 11;
+  id_brewery = 1;
 
---example with brewery with id = 11
+--example with brewery with id = 1
 -- we then show all the information of the updated brewery
 SELECT
   *
 FROM
   brewery b
 WHERE
-  b.id_brewery = 11
+  b.id_brewery = 1
   -- ## 13 ## Supprimer les photos d'une bière en particulier.
 DELETE FROM beer_photo
 WHERE
-  id_beer = 11;
+  id_beer = 1;

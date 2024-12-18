@@ -10,6 +10,7 @@ services:
       POSTGRES_DB: ${DATABASE_NAME}
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./sql-scripts/init:/docker-entrypoint-initdb.d/
 
   
   node_app:
