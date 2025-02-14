@@ -7,7 +7,8 @@ CREATE TABLE IF NOT EXISTS brewery (
 	region				VARCHAR(50),
 	city				VARCHAR(50),
 	adress				VARCHAR(150),
-	inauguration_date 	DATE
+	inauguration_date 	DATE,
+	brewery_photourl	VARCHAR(350)
 );
 
 CREATE TABLE IF NOT EXISTS category (
