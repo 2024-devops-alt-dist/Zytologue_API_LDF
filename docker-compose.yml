@@ -3,7 +3,7 @@ services:
     image: postgres:latest
     container_name: postgres_container_API
     ports:
-      - '${DATABASE_PORT}:5432'
+      - '5432:5432'
     environment:
       POSTGRES_USER: ${DATABASE_USER}
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
